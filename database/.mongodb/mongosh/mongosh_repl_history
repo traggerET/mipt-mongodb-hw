@@ -1,0 +1,41 @@
+db.peoples.find({"Height(Inches)": {$gte: 70}}).explain("executionStats")
+db.peoples.createIndex({"Height(Inches)": 1})
+db.peoples.find({"Height(Inches)": {$gte: 70}}).explain("executionStats")
+db.peoples.find({"Height(Inches)": {$gte: 70}}).sort({"Weight(Pounds)": -1}).explain("executionStats")
+db.peoples.createIndex({"Weight(Pounds)": 1})
+db.peoples.find({"Height(Inches)": {$gte: 70}}).sort({"Weight(Pounds)": -1}).explain("executionStats")
+db.peoples.find({"Height(Inches)": {$gte: 70}}).sort({"Weight(Pounds)": -1})
+db.peoples.find({"Height(Inches)": {$gte: 70}}).sort({"Weight(Pounds)": 1})
+db.peoples.find({"Height(Inches)": {$gte: 70}}).sort({"Height(Inches)": 1})
+db.peoples.find().sort({"Height(Inches)": 1})
+db.peoples.insert({"Height(Inches)": 50, "Weight(Pounds)": 200})
+db.peoples.find().sort({"Height(Inches)": -1})
+db.peoples.updateOne({'Height(Inches)': 75.1528}, {$set: {"Height(Inches)": 80}})
+db.peoples.updateOne({"Index": "1894"}, {$set: {"Height(Inches)": 80}})
+db.peoples.find().sort({"Height(Inches)": -1})
+db.peoples.find().sort({"Weight(Pounds)": -1})
+db.peoples.sort({"Weight(Pounds)": -1})
+db.peoples.find({'Height(Inches)': {$lte: 63}}).sort({"Weight(Pounds)": -1})
+db.peoples.find({'Height(Inches)': {$lte: 63}}).sort({"Weight(Pounds)": 0})
+db.peoples.find({'Height(Inches)': {$lte: 63}}).sort({"Weight(Pounds)": 1})
+db.peoples.find({'Height(Inches)': {$lte: 63}})
+db.peoples.find({'Height(Inches)': {$gte: 75}})
+db.peoples.find({'Height(Inches)': {$gte: 78}})
+db.peoples.find()
+use cargo
+db.titanic.find()
+db.getCollectionNames()
+use test
+use f
+db.titanic.find()
+db.find()
+find()
+use titanic
+use test
+db.titanic.find()
+db.
+db.getCollectionNames()
+lisgt
+peoplesinfo.find()
+ls
+db.peoplesinfo.find()
